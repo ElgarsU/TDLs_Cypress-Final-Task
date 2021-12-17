@@ -4,11 +4,11 @@ import { ProductPage } from "../../pageObjects/pages/ProductPage";
 import { CheckoutPage } from "../../pageObjects/pages/CheckoutPage";
 
 describe("Testing product checkout flow.", () => {
-  it.skip("Adding an item to cart as registered user.", () => {
+  it("Adding an item to cart as registered user.", () => {
+    HomePage.visitSportsDirect();
     HomePage.goToLoginPage();
     LoginPage.logInWithUser("registered_user");
     HomePage.verifyLoginStatus();
-    //set up login cookies?
     HomePage.goToProductPage();
     ProductPage.verifyProductPage();
     ProductPage.addItemToCart();
@@ -21,11 +21,10 @@ describe("Testing product checkout flow.", () => {
     ProductPage.addItemToCart();
     ProductPage.verifyItemAdded();
     ProductPage.goToCheckout();
-    LoginPage.continueAsGuest();
-    //CheckoutPage.inputUserData();
-    //CheckoutPage.verifyDataInput();
-    //CheckoutPage.chooseCardPayment();
-    //CheckoutPage.continueWithoutCardData();
-    //CheckoutPage.verifyErrorMessage();
+    LoginPage.checkoutAsGuest();
+    CheckoutPage.inputUserData("guest_user");
+    CheckoutPage.verifyDataInput();
+    CheckoutPage.chooseCardPayment();
+    CheckoutPage.verifyErrorMessage();
   });
 });
