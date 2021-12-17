@@ -1,27 +1,26 @@
 import { HomePage } from "../../pageObjects/pages/HomePage";
 import { LoginPage } from "../../pageObjects/pages/LoginPage";
-import { ProductsPage } from "../../pageObjects/pages/ProductsPage";
-import { ItemPage } from "../../pageObjects/pages/ItemPage";
+import { ProductPage } from "../../pageObjects/pages/ProductPage";
 import { CheckoutPage } from "../../pageObjects/pages/CheckoutPage"
 
 describe("Testing product checkout flow.", () => {
   it("Adding an item to cart as registered user.", () => {
     HomePage.goToLoginPage();
-    LoginPage.loginWithUser();
-    HomePage.verifyLogin();
+    LoginPage.logInWithUser("registered_user");
+    HomePage.verifyLoginStatus();
     //set up login cookies?
-    ProductsPage.goToProductsPage();
-    ProductsPage.verifyItemAvailable();
-    ItemPage.addItemToCart();
-    ItemPage.verifyItemAdded();
+    HomePage.goToProductPage();
+    ProductPage.verifyProductPage();
+    //ProductPage.addItemToCart();
+    //ProductPage.verifyItemAdded();
   });
 
-  it("Checkout as a guest, request card details error message.", () => {
-    ProductsPage.goToProductsPage();
-    ProductsPage.verifyItemAvailable();
-    ItemPage.addItemToCart();
-    ItemPage.verifyItemAdded();
-    ItemPage.goToCheckout();
+  it.skip("Checkout as a guest, request card details error message.", () => {
+    ProductPage.goToProductPage();
+    ProductPage.verifyProducPage();
+    ProductPage.addItemToCart();
+    ProductPage.verifyItemAdded();
+    ProductPage.goToCheckout();
     LoginPage.continueAsGuest();
     CheckoutPage.inputUserData();
     CheckoutPage.verifyDataInput();

@@ -7,7 +7,7 @@
   },
   "new_user1": {
     "email": "new@email.com",
-    "password": "EZcbHZDcf3e7cGc",
+    "password": "EZcbHZDcf3e7wwcGc",
     "first_name": "John",
     "last_name": "Dove"
   },
@@ -19,7 +19,7 @@
   },
   "new_user3": {
     "email": "newnewest@email.com",
-    "password": "EZcbHZDcf3e7cGcFF2",
+    "password": "EZcbHZDcfww3e7cGcFF2",
     "first_name": "John The User",
     "last_name": "Dove"
   },
@@ -41,7 +41,7 @@
   },
   "error_user": {
     "email": "abcd@defg.hi",
-    "password": "qwertyQWERTY",
+    "password": "qwertyQWERTYddd",
     "first_name": "Error",
     "last_name": "User"
   }

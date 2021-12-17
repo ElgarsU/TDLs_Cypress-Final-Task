@@ -4,7 +4,7 @@ import { LoginPage } from "../../pageObjects/pages/LoginPage";
 import { HomePage } from "../../pageObjects/pages/HomePage";
 
 describe("Testing user creation and login flow.", () => {
-  it.skip("Creating a new user.", () => {
+  it("Creating a new user.", () => {
     HomePage.goToLoginPage();
     LoginPage.goToNewUserForm();
     //For test evaluation and grading, use arguments new_user3 or new_user4
@@ -21,4 +21,10 @@ describe("Testing user creation and login flow.", () => {
     LoginPage.logInWithUser("registered_user");
     HomePage.verifyLoginStatus();
   });
+
+  it.skip("Failing test case with incorrect login to showcase screenshots", ()=> {
+    HomePage.goToLoginPage();
+    LoginPage.logInWithUser("error_user");
+    HomePage.verifyLoginStatus();
+  })
 });
