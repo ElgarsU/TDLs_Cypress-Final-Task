@@ -6,7 +6,7 @@ import { HomePage } from "../../pageObjects/pages/HomePage";
 describe("Testing user creation and login flow.", () => {
   it("Creating a new user.", () => {
     HomePage.goToLoginPage();
-    //LoginPage.goToNewUserForm();
+    LoginPage.goToNewUserForm();
     //CreateUserPage.enterUserData();
     //HomePage.verifyLogin();
   });
