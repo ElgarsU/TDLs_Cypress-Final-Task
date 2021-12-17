@@ -4,7 +4,7 @@ import { LoginPage } from "../../pageObjects/pages/LoginPage";
 import { HomePage } from "../../pageObjects/pages/HomePage";
 
 describe("Testing user creation and login flow.", () => {
-  it.skip("Creating a new user.", () => {
+  it("Creating a new user.", () => {
     HomePage.visitSportsDirect();
     HomePage.goToLoginPage();
     LoginPage.createNewAccount();
@@ -24,7 +24,7 @@ describe("Testing user creation and login flow.", () => {
     HomePage.verifyLoginStatus();
   });
 
-  it.skip("Failing test case with incorrect login to showcase screenshots", () => {
+  it("Failing test case with incorrect login to showcase screenshots", () => {
     HomePage.visitSportsDirect();
     HomePage.goToLoginPage();
     LoginPage.logInWithUser("error_user");

@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-12-17T14:45:07.789Z",
+    "end": "2021-12-17T14:48:43.216Z",
+    "duration": 184372,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "41f5db63-80d6-4ffe-adb9-ce851fff1688",
+      "title": "",
+      "fullFile": "cypress/integration/lv.sportsdirect.com/checkoutFlow.spec.js",
+      "file": "cypress/integration/lv.sportsdirect.com/checkoutFlow.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8223cd7b-ff55-4d94-b034-26364ede53af",
+          "title": "Testing product checkout flow.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adding an item to cart as registered user.",
+              "fullTitle": "Testing product checkout flow. Adding an item to cart as registered user.",
+              "timedOut": null,
+              "duration": 46604,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.HomePage.visitSportsDirect();\n_HomePage.HomePage.goToLoginPage();\n_LoginPage.LoginPage.logInWithUser(\"registered_user\");\n_HomePage.HomePage.verifyLoginStatus();\n_HomePage.HomePage.goToProductPage();\n_ProductPage.ProductPage.verifyProductPage();\n_ProductPage.ProductPage.addItemToCart();\n_ProductPage.ProductPage.verifyItemAdded();",
+              "err": {},
+              "uuid": "b698b000-8bb4-4109-a6ec-387278d9d002",
+              "parentUUID": "8223cd7b-ff55-4d94-b034-26364ede53af",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checkout as a guest, request card details error message.",
+              "fullTitle": "Testing product checkout flow. Checkout as a guest, request card details error message.",
+              "timedOut": null,
+              "duration": 68547,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.HomePage.goToProductPage();\n_ProductPage.ProductPage.verifyProductPage();\n_ProductPage.ProductPage.addItemToCart();\n_ProductPage.ProductPage.verifyItemAdded();\n_ProductPage.ProductPage.goToCheckout();\n_LoginPage.LoginPage.checkoutAsGuest();\n_CheckoutPage.CheckoutPage.inputUserData(\"guest_user\");\n_CheckoutPage.CheckoutPage.verifyDataInput();\n_CheckoutPage.CheckoutPage.chooseCardPayment();\n_CheckoutPage.CheckoutPage.verifyErrorMessage();",
+              "err": {},
+              "uuid": "2f1f9180-bf99-4377-b5e1-b9884408bd78",
+              "parentUUID": "8223cd7b-ff55-4d94-b034-26364ede53af",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b698b000-8bb4-4109-a6ec-387278d9d002",
+            "2f1f9180-bf99-4377-b5e1-b9884408bd78"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 115151,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "16223b9d-e719-4f8f-9c34-c95e0c465e20",
+      "title": "",
+      "fullFile": "cypress/integration/lv.sportsdirect.com/userFlow.spec.js",
+      "file": "cypress/integration/lv.sportsdirect.com/userFlow.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6313b37-7637-468d-9faa-a3aa33cf6bbe",
+          "title": "Testing user creation and login flow.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creating a new user.",
+              "fullTitle": "Testing user creation and login flow. Creating a new user.",
+              "timedOut": null,
+              "duration": 32161,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.HomePage.visitSportsDirect();\n_HomePage.HomePage.goToLoginPage();\n_LoginPage.LoginPage.createNewAccount(); //For test evaluation and grading, use arguments new_user3 or new_user4\n//new_user1 and new_user2 were used for test development\n\n_CreateUserPage.CreateUserPage.enterUserData(\"new_user1\"); //There isn't a unique message for new user registration\n//If successful, newly created user is logged in\n//Verifying test case is the same as a logged in user verify\n\n_HomePage.HomePage.verifyLoginStatus();",
+              "err": {},
+              "uuid": "017bdf29-e455-41f1-88a0-9f035d1ed359",
+              "parentUUID": "d6313b37-7637-468d-9faa-a3aa33cf6bbe",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logging in with a registered user",
+              "fullTitle": "Testing user creation and login flow. Logging in with a registered user",
+              "timedOut": null,
+              "duration": 16336,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.HomePage.visitSportsDirect();\n_HomePage.HomePage.goToLoginPage();\n_LoginPage.LoginPage.logInWithUser(\"registered_user\");\n_HomePage.HomePage.verifyLoginStatus();",
+              "err": {},
+              "uuid": "0fab08c3-12bf-4621-8e38-29247a60a204",
+              "parentUUID": "d6313b37-7637-468d-9faa-a3aa33cf6bbe",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Failing test case with incorrect login to showcase screenshots",
+              "fullTitle": "Testing user creation and login flow. Failing test case with incorrect login to showcase screenshots",
+              "timedOut": null,
+              "duration": 20724,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  \"/task/assets/screenshots/lv.sportsdirect.com/userFlow.spec.js/Testing user creation and login flow. -- Failing test case with incorrect login to showcase screenshots (failed).png\",\n  {\n    \"title\": \"Time of execution:\",\n    \"value\": \"2021-12-17T14:48:43.102Z\"\n  }\n]",
+              "code": "_HomePage.HomePage.visitSportsDirect();\n_HomePage.HomePage.goToLoginPage();\n_LoginPage.LoginPage.logInWithUser(\"error_user\");\n_HomePage.HomePage.verifyLoginStatus();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected <span.dnnFormMessage.dnnFormValidationSummary.field-validation-error> not to exist in the DOM, but it was continuously found.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected <span.dnnFormMessage.dnnFormValidationSummary.field-validation-error> not to exist in the DOM, but it was continuously found.\n    at Function.logInWithUser (https://lv.sportsdirect.com/__cypress/tests?p=cypress/integration/lv.sportsdirect.com/userFlow.spec.js:323:34)\n    at Context.eval (https://lv.sportsdirect.com/__cypress/tests?p=cypress/integration/lv.sportsdirect.com/userFlow.spec.js:137:26)",
+                "diff": null
+              },
+              "uuid": "dedfd5e4-5cc0-441d-b583-8943d867cd2e",
+              "parentUUID": "d6313b37-7637-468d-9faa-a3aa33cf6bbe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "017bdf29-e455-41f1-88a0-9f035d1ed359",
+            "0fab08c3-12bf-4621-8e38-29247a60a204"
+          ],
+          "failures": [
+            "dedfd5e4-5cc0-441d-b583-8943d867cd2e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 69221,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/task/results",
+        "html": false,
+        "overwrite": false
+      },
+      "version": "6.0.1"
+    }
+  }
+}
