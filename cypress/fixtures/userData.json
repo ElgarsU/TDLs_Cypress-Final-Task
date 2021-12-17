@@ -4,18 +4,14 @@
     "password": "EZcbHZDcf3e7cGc",
     "first_name": "Eldzis",
     "last_name": "Sragle",
-    "birth_date": 1,
-    "birth_month": "January",
-    "birth_year": 1990
+    "birth_month": "January"
   },
   "new_user": {
     "email": "new@email.com",
     "password": "EZcbHZDcf3e7cGc",
     "first_name": "John",
     "last_name": "Dove",
-    "birth_date": 1,
-    "birth_month": "January",
-    "birth_year": 1990
+    "birth_month": "January"
   },
   "guest_user": {
     "email": "guest@mail.com",
@@ -32,8 +28,6 @@
     "password": "qwertyQWERTY",
     "first_name": "Error",
     "last_name": "User",
-    "birth_date": 1,
-    "birth_month": "January",
-    "birth_year": 1990
+    "birth_month": "January"
   }
 }
