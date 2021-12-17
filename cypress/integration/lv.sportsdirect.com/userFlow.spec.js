@@ -11,12 +11,12 @@ describe("Testing user creation and login flow.", () => {
     //There isn't a unique message for new user registration
     //If successful, newly created user is logged in
     //Verifying test case is the same as a logged in user verify 
-    //TODO: HomePage.verifyLoginStatus();
+    HomePage.verifyLoginStatus();
   });
 
   it("Logging in with a registered user", () => {
     HomePage.goToLoginPage();
     LoginPage.logInWithUser("registered_user");
-    //TODO: HomePage.verifyLoginStatus();
+    HomePage.verifyLoginStatus();
   });
 });
