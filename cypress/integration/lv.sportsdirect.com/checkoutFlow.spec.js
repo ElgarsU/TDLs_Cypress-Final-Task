@@ -11,7 +11,7 @@ describe("Testing product checkout flow.", () => {
     //set up login cookies?
     HomePage.goToProductPage();
     ProductPage.verifyProductPage();
-    //ProductPage.addItemToCart();
+    ProductPage.addItemToCart();
     //ProductPage.verifyItemAdded();
   });
 
