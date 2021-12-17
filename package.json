@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "cypress": "^9.1.1",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.0.1",
+    "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --record --key 454dd408-051f-4e1e-bd3b-f317152866f7",
+    "merge-jsons": "mochawesome-merge cypress/results/*.json -o cypress/results/combined.json",
+    "generate-report": "marge cypress/results/combined.json -f report -o cypress/results && mv -v cypress/screenshots cypress/results/assets"    
+  }
+}
