@@ -7,7 +7,10 @@ describe("Testing user creation and login flow.", () => {
   it("Creating a new user.", () => {
     HomePage.goToLoginPage();
     LoginPage.goToNewUserForm();
-    //CreateUserPage.enterUserData();
+    CreateUserPage.enterUserData();
+    //There isn't a unique message for new user registration
+    //If successful, newly created user is logged in
+    //Verifying test case is the same as a logged in user verify 
     //HomePage.verifyLogin();
   });
 

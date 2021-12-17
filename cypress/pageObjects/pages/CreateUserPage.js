@@ -9,9 +9,10 @@ const REGISTER_BUTTON = "#RegistrationSubmit";
 
 export class CreateUserPage extends BasePage {
   static enterUserData(user = "new_user") {
+
     cy.fixture("userData").then((fixture) => {
       this.type(FIRST_NAME_INPUT, fixture[user].first_name);
-      this.type(LAST_NAME_INPUT, fixture[user].last_nane);
+      this.type(LAST_NAME_INPUT, fixture[user].last_name);
       this.type(EMAIL_INPUT, fixture[user].email);
       this.type(PASSWORD_INPUT, fixture[user].password);
       this.type(CONFIRM_PASSWORD_INPUT, fixture[user].password);
