@@ -7,10 +7,12 @@ describe("Testing user creation and login flow.", () => {
   it.skip("Creating a new user.", () => {
     HomePage.goToLoginPage();
     LoginPage.goToNewUserForm();
-    CreateUserPage.enterUserData();
+    //For test evaluation and grading, use arguments new_user3 or new_user4
+    //new_user1 and new_user2 were used for test development
+    CreateUserPage.enterUserData("new_user2");
     //There isn't a unique message for new user registration
     //If successful, newly created user is logged in
-    //Verifying test case is the same as a logged in user verify 
+    //Verifying test case is the same as a logged in user verify
     HomePage.verifyLoginStatus();
   });
 

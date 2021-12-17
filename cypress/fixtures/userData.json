@@ -3,15 +3,31 @@
     "email": "eldzis@inbox.lv",
     "password": "EZcbHZDcf3e7cGc",
     "first_name": "Eldzis",
-    "last_name": "Sragle",
-    "birth_month": "January"
+    "last_name": "Sragle"
   },
-  "new_user": {
+  "new_user1": {
     "email": "new@email.com",
     "password": "EZcbHZDcf3e7cGc",
     "first_name": "John",
-    "last_name": "Dove",
-    "birth_month": "January"
+    "last_name": "Dove"
+  },
+  "new_user2": {
+    "email": "newnew@email.com",
+    "password": "EZcbHZDcf3e7cGcFF",
+    "first_name": "John Young",
+    "last_name": "Dove"
+  },
+  "new_user3": {
+    "email": "newnewest@email.com",
+    "password": "EZcbHZDcf3e7cGcFF2",
+    "first_name": "John The User",
+    "last_name": "Dove"
+  },
+   "new_user4": {
+    "email": "janes-email@email.com",
+    "password": "EZcbHZDcf3e7cGcFF2",
+    "first_name": "Jane",
+    "last_name": "Dove"
   },
   "guest_user": {
     "email": "guest@mail.com",
@@ -27,7 +43,6 @@
     "email": "abcd@defg.hi",
     "password": "qwertyQWERTY",
     "first_name": "Error",
-    "last_name": "User",
-    "birth_month": "January"
+    "last_name": "User"
   }
 }

@@ -4,6 +4,7 @@ const CONFIRM_NEW_USER_FORM = ".Login > .row > .col-xs-12 > h1";
 const LOGIN_EMAIL_FIELD = "#Login_EmailAddress";
 const LOGIN_PASSWORD_FIELD = "#Login_Password";
 const LOGIN_BUTTON = "#LoginButton";
+const INCORRECT_LOGIN_DATA = ".field-validation-error"
 
 export class LoginPage extends BasePage {
   static goToNewUserForm() {
@@ -12,10 +13,11 @@ export class LoginPage extends BasePage {
   }
 
   static logInWithUser(user = "registered_user") {
-      cy.fixture("userData").then((fixture) => {
-          this.type(LOGIN_EMAIL_FIELD, fixture[user].email);
-          this.type(LOGIN_PASSWORD_FIELD, fixture[user].password);
-      });
+    cy.fixture("userData").then((fixture) => {
+      this.type(LOGIN_EMAIL_FIELD, fixture[user].email);
+      this.type(LOGIN_PASSWORD_FIELD, fixture[user].password);
+    });
       this.click(LOGIN_BUTTON);
+    cy.get(INCORRECT_LOGIN_DATA).should("not.exist");
   }
 }

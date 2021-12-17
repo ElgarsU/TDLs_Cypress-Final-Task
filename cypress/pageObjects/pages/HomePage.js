@@ -12,7 +12,6 @@ export class HomePage extends BasePage {
   }
 
   static verifyLoginStatus() {
-    cy.visit("/");
     cy.get(SIGNOUT_TEXT).should("have.text", "Sign out");
   }
 }
