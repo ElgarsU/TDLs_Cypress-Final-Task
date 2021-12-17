@@ -12,7 +12,7 @@ describe("Testing product checkout flow.", () => {
     HomePage.goToProductPage();
     ProductPage.verifyProductPage();
     ProductPage.addItemToCart();
-    //ProductPage.verifyItemAdded();
+    ProductPage.verifyItemAdded();
   });
 
   it.skip("Checkout as a guest, request card details error message.", () => {
